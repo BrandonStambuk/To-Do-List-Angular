@@ -19,7 +19,7 @@ export class CrudService {
     return this.http.get<Task[]>(this.serviceUrl);
   }
   deleteTask(task: Task):Observable<Task>{
-    return this.http.delete<Task>(this.serviceUrl+'/'+task);
+    return this.http.delete<Task>(this.serviceUrl+'/'+task.id);
   }
   editTask(task: Task):Observable<Task>{
     return this.http.put<Task>(this.serviceUrl+'/'+task.id,task);
