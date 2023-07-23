@@ -1,0 +1,1 @@
+To start the project, it is necessary to have json server installed.
