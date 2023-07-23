@@ -1,28 +1,28 @@
 <div class="container-fluid bg-light">
-    <div class="container bg-light">
-      <div class="row mt-4" style="height:500px;">
+    <div class="container">
+      <div class="row mt-4">
         <div class="col"></div>
         <div class="col-md-6 bg-white shadow">
-          <div class="card bg-warning">
-            <h4 class="text-white ps-3 pt-2 pb-2">To do list</h4>
+          <div class="card bg-success">
+            <h4 class="text-white ps-3 pt-2 pb-2">Lista de Tareas con Angular</h4>
           </div>
   
           <div class="shadow">
             <div class="input-group p-4">
-              <input type="text" class="form-control" placeholder="Ingrese nueva tarea" name="task" [(ngModel)]="addTaskValue">
-              <button class="btn btn-outline-success" type="button" (click)="addTask()">+</button>
+              <input type="text" class="form-control" placeholder="Ingrese nueva tarea" name="task" [(ngModel)]="addTaskValue">   
+                   <button class="btn btn-outline-success custom-button " type="button" (click)="addTask()">+</button>
             </div>
           </div>
   
           <h4 class="text-primary mt-4">Tareas</h4>
           <div style="overflow-y: auto; height: 350px;">
             <div class="m-3" *ngFor="let task of taskArr">
-              <div class="p-2 shadow border">
-                <div class="input-group row ps-3">
-                  <div class="card col-md-10">{{task.task_name}}</div>
+              
+                <div class="input-group row ps-2">
+                  <div class="card col-md-10 ctask">{{task.task_name}}</div>
                   <button class="btn btn-outline-primary col me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" type ="button"(click)="call(task)">e</button>
                   <button class="btn btn-outline-danger col" (click)="deleteTask(task)">X</button>
-                </div>
+                
               </div>
             </div>
           </div>
